@@ -1,0 +1,97 @@
+/* Variables Start*/
+$either-color: rgb(200, 21, 21);
+$or-color: rgb(20, 20, 199);
+
+$button-bg-color: #007bff; // Blue background
+$button-hover-bg-color: #0056b3; // Darker blue for hover
+$button-text-color: white; // White text
+$button-border-radius: 5px; // Rounded corners
+$button-padding: 10px 20px; // Padding
+/* Variables End */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  
+  .container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    border: none;
+
+    
+    .either, .or {
+        flex: 1; /* Takes 50% of the screen width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%; // Ensure full height for each section
+        padding: 20px; // Add some padding to avoid content touching the edges
+    
+        .text-button-grp {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;;
+        }
+
+        h1, button {
+          margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+            font-size: 4vw;
+        }
+
+        h2 {
+            margin-top: 10px;
+            color: white;
+        }
+
+        button {
+            background-color: $button-bg-color;
+            color: $button-text-color;
+            border: none; // Remove default border
+            border-radius: $button-border-radius;
+            padding: $button-padding;
+            font-size: 16px; // Font size
+            cursor: pointer; // Pointer cursor on hover
+            transition: background-color 0.3s ease, transform 0.2s ease; // Smooth transitions
+            margin-top: 10px;
+          
+            &:hover {
+              background-color: $button-hover-bg-color; // Change background on hover
+              transform: scale(1.05); // Slightly enlarge on hover
+            }
+          
+            &:focus {
+              outline: none; // Remove default focus outline
+              box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Add a subtle glow effect on focus
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    }
+  }
+  
+  .either {
+    background-color: $either-color;
+  }
+  
+  .or {
+    background-color: $or-color;
+  }
