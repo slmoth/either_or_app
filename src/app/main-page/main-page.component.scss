@@ -24,7 +24,19 @@ html, body {
   
   .container {
     display: flex;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* Full viewport height */    
+
+    .question {
+      position: fixed;       // Fixes it at the top of the screen
+      top: 0;                // Aligns it to the top
+      left: 10%;             // Centers horizontally by leaving a 10% margin on the left
+      width: 80%;            // Covers 80% of the screen width
+      z-index: 3;            // Ensures it’s above the either/or sections and container shadow
+      color: white;          // Adjust text color as needed
+      padding: 15px;         // Adds padding
+      text-align: center;    // Centers the text
+      font-size: 4vw;
+  }  
     
     .either, .or {
         flex: 1; /* Takes 50% of the screen width */

@@ -16,8 +16,9 @@ export class MainPageComponent implements OnInit{
 
   private voteService = inject(VoteService);
 
-  either: string = 'TRUMP';
-  or: string = 'HARRIS';
+  question?: string = 'Who is the bigger noob?';
+  either: string = 'Rooban';
+  or: string = 'Joker';
   canVoteToday: boolean = true;
   eitherVoteCount: number = 0;
   orVoteCount: number = 0;

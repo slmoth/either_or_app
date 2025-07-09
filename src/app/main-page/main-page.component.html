@@ -1,17 +1,18 @@
 <div class="container">
-    <div class="either">
-        <div class="text-button-grp">
-            <h1>{{ either }}</h1>
-            <button class="voteBtn" [class.hidden]="!canVoteToday" (click)="countVote('either')"> Vote for {{ either }}!</button>
-            <h2>{{ eitherVoteCount }} Votes!</h2>           
+    <h1 class="question">{{ question }}</h1>
+        <div class="either">
+            <div class="text-button-grp">
+                <h1>{{ either }}</h1>
+                <button class="voteBtn" [class.hidden]="!canVoteToday" (click)="countVote('either')"> Vote for {{ either }}!</button>
+                <h2>{{ eitherVoteCount }} Votes!</h2>           
+            </div>
         </div>
-    </div>
 
-    <div class="or">
-        <div class="text-button-grp">
-            <h1>{{ or }}</h1>
-            <button class="voteBtn" [class.hidden]="!canVoteToday" (click)="countVote('or')">Vote for {{ or }}!</button>
-            <h2>{{ orVoteCount }} Votes!</h2>
+        <div class="or">
+            <div class="text-button-grp">
+                <h1>{{ or }}</h1>
+                <button class="voteBtn" [class.hidden]="!canVoteToday" (click)="countVote('or')">Vote for {{ or }}!</button>
+                <h2>{{ orVoteCount }} Votes!</h2>
+            </div>
         </div>
-    </div>
 </div>
